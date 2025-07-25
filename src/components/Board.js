@@ -1,8 +1,21 @@
-const Board = ({ board }) => {
-    console.log("board", board)
+import BoardCell from "./BoardCell"
+import "./Board.css"
 
-    return(
-        <p>Board</p>
+const Board = ({ board }) => {
+
+    const boardStyle = {
+        gridTemplateRows: `repeat(${board.size.rows}, 1fr)`,
+        gridTemplateColumns: `repeat(${board.size.columns}, 1fr)`
+    }
+
+    return (
+        <div className="Board" style={boardStyle}>
+            {board.rows.map((row, y) =>
+                row.map((cell, x) => (
+                    <BoardCell key={x * board.size.columns + x} cell={cell} />
+                ))
+            )}
+        </div>
     )
 }
 
