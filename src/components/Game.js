@@ -1,9 +1,15 @@
 import Menu from "./Menu";
 
+import { useGameOver } from "../hooks/useGameOver.js";
 
 const Game = ({ rows, columns }) => {
 
-    const start = () => { console.log("start")}
+    const [gameOver, setGameOver, resetGameOver] = useGameOver();
+
+    const start = () => { 
+        resetGameOver();
+        console.log(`Start gameOver is ${gameOver}`)
+    }
 
     return (
         <div className="Game">
