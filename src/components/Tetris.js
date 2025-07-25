@@ -1,11 +1,13 @@
 import "./Tetris.css"
 
+import Board from "./Board"
+
+
+
 const Tetris = ({ rows, columns, setGameOver }) => {
 
     return (
-        <p>
-            Tetris
-        </p>
+       <Board />
     )
 }
 
