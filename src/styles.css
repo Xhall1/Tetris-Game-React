@@ -6,28 +6,20 @@
 
 html, body {
   height: 100%;
+  width: 100%;
+  font-family: sans-serif;
   background-color: #406;
+  color: #fff;
+  overflow: hidden;
 }
 
 .App {
-  font-family: sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   text-align: center;
-  color: #fff;
-  height: 100vh;
-  padding: 20px;
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .App {
-    padding: 15px;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .App {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
 }
