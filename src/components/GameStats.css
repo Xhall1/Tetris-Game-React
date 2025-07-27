@@ -1,24 +1,56 @@
+.GameStats {
+  position: absolute;
+  width: 22vw;
+  list-style-type: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+}
+
 .GameStats__left {
-    right: 0;
-    top: 22vh;
-    text-align: left;
+  right: 0;
+  top: 22vh;
+  text-align: left;
 }
 
 .GameStats__right {
-    right: 0;
-    bottom: 0;
-    text-align: left;
-}
-
-.GameStats {
-    position: absolute;
-    width: 22vw;
-    list-style-type: none;
-    color: rgba(255, 255, 255, 0.5);
+  right: 0;
+  bottom: 0;
+  text-align: left;
 }
 
 .GameStats .value {
-    font-size: 2.8rem;
-    margin-bottom: 0.5em;
-    color: rgba(255, 255, 255, 1);
+  font-size: clamp(1.5rem, 2.8vw, 2.8rem);
+  margin-bottom: 0.5em;
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .GameStats {
+    width: 40vw;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .GameStats .value {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .GameStats {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .GameStats__left,
+  .GameStats__right {
+    position: static;
+    text-align: center;
+  }
+
+  .GameStats .value {
+    font-size: clamp(1rem, 6vw, 1.6rem);
+  }
 }
