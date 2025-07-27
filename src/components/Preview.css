@@ -1,21 +1,21 @@
 .Preview {
-  position: fixed;
-  top: 2vh;
-  right: 2vw;
-  z-index: 20;
-  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 72.2vw;
+  background: rgba(0, 0, 0, 0.1);
+  border: 10px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
-  padding: 0.5rem;
 }
 
 .Preview-board {
   display: grid;
+  grid-gap: 2px;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  width: 11vmin;
-  aspect-ratio: 1 / 1;
+  width: 11vw;
+  height: 11vw;
 }
+
 
 .Preview-board > div {
   aspect-ratio: 1 / 1;
